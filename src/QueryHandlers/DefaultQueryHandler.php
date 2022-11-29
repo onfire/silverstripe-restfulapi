@@ -169,7 +169,7 @@ class DefaultQueryHandler implements QueryHandler
         //map HTTP word to module method
         switch ($request->httpMethod()) {
             case 'GET':
-                return $this->findModel($model, $id, $queryParams, $request);
+                return $this->findModel($model, $queryParams, $request, $id);
                 break;
             case 'POST':
                 return $this->createModel($model, $request);
